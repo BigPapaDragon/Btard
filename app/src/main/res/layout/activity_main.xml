@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.adara.yashsd.btard.MainActivity"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:id="@+id/mytitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/fragment_container"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/bungee_hairline"
+            android:text="BT-Ard"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:layout_margin="7dp"
+            android:background="@color/colorPrimaryDark"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_below="@+id/mytitle"
+        android:layout_above="@+id/mynav">
+        <!--android:layout_marginBottom="56dp"-->
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/mynav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/nav_remote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/colorYellow"
+                    android:background="@color/colorYellow"
+                    android:src="@drawable/ic_remote"/>
+
+                <ImageView
+                    android:id="@+id/nav_controller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/colorPink"
+                    android:background="@color/colorPink"
+                    android:src="@drawable/ic_controller"/>
+
+                <ImageView
+                    android:id="@+id/nav_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/colorGreen"
+                    android:background="@color/colorGreen"
+                    android:src="@drawable/ic_home"/>
+
+                <ImageView
+                    android:id="@+id/nav_rgb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/colorBlue"
+                    android:background="@color/colorBlue"
+                    android:src="@drawable/ic_rgb"/>
+
+                <ImageView
+                    android:id="@+id/nav_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/colorPurple"
+                    android:background="@color/colorPurple"
+                    android:src="@drawable/ic_switch"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>
